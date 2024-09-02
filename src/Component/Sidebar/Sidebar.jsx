@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import  '../sidebar/Sidebar.css'
+import  '../Sidebar/Sidebar.css'
 import gemini from "../../assets/gemini.png"
 import { IoIosAdd } from "react-icons/io";
 import {FiAlignJustify} from "react-icons/fi"
