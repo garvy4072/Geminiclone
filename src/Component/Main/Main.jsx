@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import '../Main/Main2.css'
 import { FaRegUserCircle } from "react-icons/fa";
 import { CiCompass1 } from "react-icons/ci";
@@ -16,6 +16,7 @@ const {onSent,recentprompt,showresult,loading,resultdata,newchat,setinput,setlod
  const handleChange=(text)=>{
 setinput(text)
  }
+ const [Mic , setMic ] = useState(false)
 return (
     <div className='main'>
         <div className="nav">
@@ -88,8 +89,10 @@ return (
                        handleChange(e.target.value)
                     }} value={input} placeholder='Enter prompt here ' />
                     <div className="">
-                    {/* <FcGallery className='img' />
-                    <FaMicrophoneAlt className='img' /> */}
+                 
+                    <FaMicrophoneAlt className='img' onClick={()=>{
+                        setMic(!Mic)
+                    }} /> 
                     <BsSend className='img' onClick={()=>{
                         onSent()
                     }} />
